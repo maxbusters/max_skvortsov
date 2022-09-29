@@ -1,0 +1,260 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.container, .footer__container, .main .contacts__container, .main .projects__container, .main .home__container, .header__container {
+  max-width: 1440px;
+  width: 81.25%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 34px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 30px 0;
+}
+
+.header__container {
+  background-color: black;
+  padding: 20px 30px;
+}
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 700px) {
+  .header__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+  }
+}
+.header__logo {
+  color: white;
+}
+.header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media screen and (max-width: 700px) {
+  .header .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+  }
+}
+.header .nav__el {
+  color: white;
+  cursor: pointer;
+}
+.header .nav__el:hover {
+  color: yellow;
+}
+.header .nav__el:not(first-child) {
+  margin-left: 20px;
+}
+@media screen and (max-width: 700px) {
+  .header .nav__el:not(first-child) {
+    margin: 0;
+    margin-top: 10px;
+  }
+}
+
+.main .home__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .home__title {
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 64px;
+  margin-top: 200px;
+}
+.main .home__subtitle {
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 150px;
+}
+.main .home .about {
+  align-self: flex-start;
+  width: 40%;
+  margin-bottom: 50px;
+}
+.main .home .about__title {
+  text-transform: uppercase;
+}
+.main .projects__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .projects .slot {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+.main .projects .slot__title {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 0.1em;
+  margin-bottom: 15px;
+}
+.main .projects .slot__img-cont {
+  width: 45%;
+  background-color: gray;
+  border-radius: 5px;
+  border: 1px solid gray;
+  overflow: hidden;
+}
+.main .projects .slot__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .projects .slot__descr {
+  font-size: 24px;
+  line-height: 28px;
+  margin-left: 10%;
+  width: 45%;
+}
+.main .projects .slot__descr p {
+  letter-spacing: 0.01em;
+}
+.main .projects .slot__links {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.main .projects .slot__links a {
+  display: inline-block;
+  color: orangered;
+}
+.main .projects .slot__links a:hover {
+  color: brown;
+}
+.main .projects .slot__links a + a {
+  margin-left: 50px;
+}
+.main .projects .slot:nth-child(2n+1) {
+  flex-direction: row-reverse;
+}
+.main .projects .slot:nth-child(2n+1) .slot__descr {
+  margin-left: 0;
+  margin-right: 10%;
+}
+.main .projects .slot + .slot {
+  margin-top: 50px;
+}
+.main .contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=app.css.map */
